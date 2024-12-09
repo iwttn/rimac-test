@@ -80,7 +80,7 @@ Ejecutar pruebas:
 ### Ejemplo de Solicitud
 
 ```bash
-  curl -X POST https://t8r27zxz09.execute-api.us-east-2.amazonaws.com/dev/fusionados/1 \
+  curl -X POST https://psgcy1z384.execute-api.us-east-1.amazonaws.com/dev/fusionados/1 \
   -H "Content-Type: application/json" \
   -d '{
         "id": "1",
