@@ -1,0 +1,257 @@
+{
+  "id": "tt0076759",
+  "url": "https://www.imdb.com/title/tt0076759/",
+  "primaryTitle": "Star Wars: Episode IV - A New Hope",
+  "originalTitle": "Star Wars",
+  "type": "movie",
+  "genres": [
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "isAdult": false,
+  "startYear": 1977,
+  "endYear": null,
+  "runtimeMinutes": 121,
+  "averageRating": 8.6,
+  "numVotes": 1482436,
+  "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+  "primaryImage": "https://m.media-amazon.com/images/M/MV5BOGUwMDk0Y2MtNjBlNi00NmRiLTk2MWYtMGMyMDlhYmI4ZDBjXkEyXkFqcGc@._V1_.jpg",
+  "contentRating": "PG",
+  "releaseDate": {
+    "day": 25,
+    "month": 5,
+    "year": 1977
+  },
+  "interests": [
+    "Action Epic",
+    "Adventure Epic",
+    "Fantasy Epic",
+    "Quest",
+    "Sci-Fi Epic",
+    "Space Sci-Fi",
+    "Sword & Sorcery",
+    "Action",
+    "Adventure",
+    "Fantasy"
+  ],
+  "countriesOfOrigin": [
+    "United States"
+  ],
+  "externalLinks": [
+    "https://www.hotstar.com/id/movies/star-wars-a-new-hope/1260016021",
+    "https://www.lucasfilm.com/productions/episode-iv/"
+  ],
+  "spokenLanguages": [
+    "English"
+  ],
+  "filmingLocations": [
+    "Tikal National Park, Guatemala"
+  ],
+  "budget": 11000000,
+  "grossWorldwide": 775398507,
+  "directors": [
+    {
+      "id": "nm0000184",
+      "url": "https://www.imdb.com/name/nm0000184/",
+      "fullName": "George Lucas"
+    }
+  ],
+  "writers": [
+    {
+      "id": "nm0000184",
+      "url": "https://www.imdb.com/name/nm0000184/",
+      "fullName": "George Lucas"
+    }
+  ],
+  "cast": [
+    {
+      "id": "nm0000434",
+      "url": "https://www.imdb.com/name/nm0000434/",
+      "fullName": "Mark Hamill",
+      "job": "actor",
+      "characters": [
+        "Luke Skywalker"
+      ]
+    },
+    {
+      "id": "nm0000148",
+      "url": "https://www.imdb.com/name/nm0000148/",
+      "fullName": "Harrison Ford",
+      "job": "actor",
+      "characters": [
+        "Han Solo"
+      ]
+    },
+    {
+      "id": "nm0000402",
+      "url": "https://www.imdb.com/name/nm0000402/",
+      "fullName": "Carrie Fisher",
+      "job": "actress",
+      "characters": [
+        "Princess Leia Organa"
+      ]
+    },
+    {
+      "id": "nm0000027",
+      "url": "https://www.imdb.com/name/nm0000027/",
+      "fullName": "Alec Guinness",
+      "job": "actor",
+      "characters": [
+        "Ben Obi-Wan Kenobi"
+      ]
+    },
+    {
+      "id": "nm0001088",
+      "url": "https://www.imdb.com/name/nm0001088/",
+      "fullName": "Peter Cushing",
+      "job": "actor",
+      "characters": [
+        "Grand Moff Tarkin"
+      ]
+    },
+    {
+      "id": "nm0000355",
+      "url": "https://www.imdb.com/name/nm0000355/",
+      "fullName": "Anthony Daniels",
+      "job": "actor",
+      "characters": [
+        "C-3PO"
+      ]
+    },
+    {
+      "id": "nm0048652",
+      "url": "https://www.imdb.com/name/nm0048652/",
+      "fullName": "Kenny Baker",
+      "job": "actor",
+      "characters": [
+        "R2-D2"
+      ]
+    },
+    {
+      "id": "nm0562679",
+      "url": "https://www.imdb.com/name/nm0562679/",
+      "fullName": "Peter Mayhew",
+      "job": "actor",
+      "characters": [
+        "Chewbacca"
+      ]
+    },
+    {
+      "id": "nm0001190",
+      "url": "https://www.imdb.com/name/nm0001190/",
+      "fullName": "David Prowse",
+      "job": "actor",
+      "characters": [
+        "Darth Vader"
+      ]
+    },
+    {
+      "id": "nm0114436",
+      "url": "https://www.imdb.com/name/nm0114436/",
+      "fullName": "Phil Brown",
+      "job": "actor",
+      "characters": [
+        "Uncle Owen"
+      ]
+    },
+    {
+      "id": "nm0000184",
+      "url": "https://www.imdb.com/name/nm0000184/",
+      "fullName": "George Lucas",
+      "job": "director",
+      "characters": []
+    },
+    {
+      "id": "nm0000184",
+      "url": "https://www.imdb.com/name/nm0000184/",
+      "fullName": "George Lucas",
+      "job": "writer",
+      "characters": []
+    },
+    {
+      "id": "nm0476030",
+      "url": "https://www.imdb.com/name/nm0476030/",
+      "fullName": "Gary Kurtz",
+      "job": "producer",
+      "characters": []
+    },
+    {
+      "id": "nm0564768",
+      "url": "https://www.imdb.com/name/nm0564768/",
+      "fullName": "Rick McCallum",
+      "job": "producer",
+      "characters": []
+    },
+    {
+      "id": "nm0002354",
+      "url": "https://www.imdb.com/name/nm0002354/",
+      "fullName": "John Williams",
+      "job": "composer",
+      "characters": []
+    },
+    {
+      "id": "nm0852405",
+      "url": "https://www.imdb.com/name/nm0852405/",
+      "fullName": "Gilbert Taylor",
+      "job": "cinematographer",
+      "characters": []
+    },
+    {
+      "id": "nm0156816",
+      "url": "https://www.imdb.com/name/nm0156816/",
+      "fullName": "Richard Chew",
+      "job": "editor",
+      "characters": []
+    },
+    {
+      "id": "nm0160628",
+      "url": "https://www.imdb.com/name/nm0160628/",
+      "fullName": "T.M. Christopher",
+      "job": "editor",
+      "characters": []
+    },
+    {
+      "id": "nm0386532",
+      "url": "https://www.imdb.com/name/nm0386532/",
+      "fullName": "Paul Hirsch",
+      "job": "editor",
+      "characters": []
+    },
+    {
+      "id": "nm0524235",
+      "url": "https://www.imdb.com/name/nm0524235/",
+      "fullName": "Marcia Lucas",
+      "job": "editor",
+      "characters": []
+    },
+    {
+      "id": "nm0188240",
+      "url": "https://www.imdb.com/name/nm0188240/",
+      "fullName": "Dianne Crittenden",
+      "job": "casting_director",
+      "characters": []
+    },
+    {
+      "id": "nm0482961",
+      "url": "https://www.imdb.com/name/nm0482961/",
+      "fullName": "Irene Lamb",
+      "job": "casting_director",
+      "characters": []
+    },
+    {
+      "id": "nm0708525",
+      "url": "https://www.imdb.com/name/nm0708525/",
+      "fullName": "Vic Ramos",
+      "job": "casting_director",
+      "characters": []
+    },
+    {
+      "id": "nm0058045",
+      "url": "https://www.imdb.com/name/nm0058045/",
+      "fullName": "John Barry",
+      "job": "production_designer",
+      "characters": []
+    }
+  ]
+} 

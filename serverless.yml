@@ -1,0 +1,145 @@
+service: rimac-test
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  memorySize: 512
+  timeout: 10
+  architecture: x86_64
+  region: us-east-1
+  environment:
+    DYNAMODB_PERSONALIZATION_TABLE: ${self:service}-${sls:stage}-PersonalizationTable
+    DYNAMODB_FUSION_CACHE_TABLE: ${self:service}-${sls:stage}-FusionCacheTable
+    DYNAMODB_FUSION_HISTORY_TABLE: ${self:service}-${sls:stage}-FusionHistoryTable
+    EVENTBRIDGE_HISTORY_REGION: ${self:provider.region}
+    EVENT_BUS_HISTORY_NAME: ${self:service}-${sls:stage}-EventBus
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - lambda:InvokeFunction
+      Resource: "*"
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+        - events:*
+      Resource:
+        - arn:aws:events:${self:provider.region}:*:rule/* 
+        - arn:aws:dynamodb:${self:provider.region}:*:table/*
+        - arn:aws:events:${self:provider.region}:${aws:accountId}:event-bus/${self:service}-${sls:stage}-EventBus
+
+
+plugins:
+  - serverless-offline
+
+custom:
+  esbuild:
+    bundle: true
+    minify: true
+    sourcemap: false
+    target: node20
+
+package:
+  individually: true
+  exclude:
+    - node_modules/.bin/**
+    - node_modules/**/*.md
+    - node_modules/**/*.test.js
+    - node_modules/**/*.debug.js
+    - node_modules/**/*.spec.js
+    - node_modules/**/*.ts
+    - node_modules/**/*.tsbuildinfo
+    - node_modules/**/test/**
+    - node_modules/**/spec/**
+    - node_modules/**/docs/**
+    - node_modules/**/coverage/**
+    - node_modules/**/.cache/**
+    - node_modules/**/.eslintrc.js
+    - node_modules/**/.prettierrc
+    - node_modules/**/tsconfig.json
+    - node_modules/**/tsconfig.build.json
+    - node_modules/**/jestconfig.json
+
+functions:
+  getLambda:
+    handler: dist/src/serverless.handler
+    events:
+      - http:
+          method: get
+          path: fusionados
+      - http:
+          method: get
+          path: fusionados/{id}
+      - http:
+          method: get
+          path: historial
+
+  postLambda:
+    handler: dist/src/serverless.handler
+    events:
+      - http:
+          method: post
+          path: almacenar
+
+  createHistory:
+    handler: dist/src/serverless.createHistoryHandler
+    events:
+      - eventBridge:
+          pattern:
+            source:
+              - rimac-test-history
+            detail-type:
+              - history.create
+
+resources:
+  Resources:
+    FusionCacheTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.DYNAMODB_FUSION_CACHE_TABLE}
+        AttributeDefinitions:
+          - AttributeName: "id"
+            AttributeType: "S"
+        KeySchema:
+          - AttributeName: "id"
+            KeyType: "HASH"
+        BillingMode: PAY_PER_REQUEST 
+        TimeToLiveSpecification:
+          AttributeName: "ttl"
+          Enabled: true 
+
+    FusionHistoryTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName:  ${self:provider.environment.DYNAMODB_FUSION_HISTORY_TABLE}
+        AttributeDefinitions:
+          - AttributeName: "id"
+            AttributeType: "S"
+          - AttributeName: "createdAt"
+            AttributeType: "S"
+        KeySchema:
+          - AttributeName: "id"
+            KeyType: "HASH"
+          - AttributeName: "createdAt"
+            KeyType: "RANGE"
+        BillingMode: PAY_PER_REQUEST 
+
+    PersonalizationTable:
+      Type: "AWS::DynamoDB::Table"
+      Properties:
+        TableName: ${self:provider.environment.DYNAMODB_PERSONALIZATION_TABLE}
+        AttributeDefinitions:
+          - AttributeName: "id"
+            AttributeType: "S"
+          - AttributeName: "createdAt"  
+            AttributeType: "S"
+        KeySchema:
+          - AttributeName: "id"
+            KeyType: "HASH"
+          - AttributeName: "createdAt"
+            KeyType: "RANGE"
+        BillingMode: PAY_PER_REQUEST
+    
+    EventBus:
+      Type: "AWS::Events::EventBus"
+      Properties:
+        Name: ${self:provider.environment.EVENT_BUS_HISTORY_NAME}
